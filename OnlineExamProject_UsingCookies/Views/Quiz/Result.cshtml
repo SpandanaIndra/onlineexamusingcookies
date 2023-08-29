@@ -1,0 +1,11 @@
+﻿<h1>Thanks For Attending Exam</h1>
+<h3>Your Selected Answers</h3>
+<b>
+    @ViewBag.SelectedAns1<br />
+    @ViewBag.SelectedAns2<br />
+    @ViewBag.SelectedAns3<br />
+</b>
+<b>Your Score is <h2 style="color:green;display:inline-block;">@ViewBag.Score</h2> </b>
+<br />
+<br />
+<a asp-action="Question1" asp-controller="Quiz">ReWrite the Exam</a>

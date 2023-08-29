@@ -1,0 +1,29 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OnlineExamProject_UsingCookies</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/OnlineExamProject_UsingCookies.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div style="margin-left:50px" class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div style="margin-left:50px" id="timer">Time remaining: <span id="countdown">30</span> seconds</div>
+<script src="~/js/Timer.js">
+
+</script>
+<script>
+    Timer();
+</script>
+
+</body>
+</html>
+

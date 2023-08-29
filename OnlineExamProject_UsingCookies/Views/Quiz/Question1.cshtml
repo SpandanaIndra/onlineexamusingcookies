@@ -1,0 +1,37 @@
+﻿@model OnlineExamProject_UsingCookies.Models.QuestionModel
+@{
+    Layout = "_Timer";
+}
+
+
+<h2>Question 1</h2>
+<hr />
+<p>@Model.QuestionText</p>
+<form asp-action="Question1" asp-controller="Quiz">
+   @foreach(var opt in Model.Options)
+    {
+        <div>
+            <input type="radio" asp-for="SelectedOption" value="@opt"/>@opt
+        </div>
+    }
+    <button type="submit" class="btn btn-primary">Next</button>
+</form>
+
+@*<script>
+    // Add JavaScript code to handle the countdown timer
+    var countdownElement = document.getElementById("countdown");
+    var countdown = 30; // Initial countdown time in seconds
+
+    function updateCountdown() {
+        countdown--;
+        countdownElement.textContent = countdown;
+
+        if (countdown <= 0) {
+            // Time's up! Submit the answer
+            document.querySelector("form").submit();
+        }
+    }
+
+    // Start the countdown timer
+    var timerInterval = setInterval(updateCountdown, 1000);
+</script>*@
